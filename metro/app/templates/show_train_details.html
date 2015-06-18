@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+<script>
+
+ function toggleTable()
+    {
+         var elem=document.getElementById("loginTable");
+         var hide = elem.style.display =="none";
+         if (hide) {
+             elem.style.display="table";
+        } 
+        else {
+           elem.style.display="none";
+        }
+    }
+</script>
+<body>
+<a id="loginLink" onclick="toggleTable();" href="#">Show </a>
+<table id="loginTable" border="1" align="center" style="display:none">
+   <tr>
+<th>Name</th>
+<th>City</th>
+</tr>
+{% for d in list %}	
+<tr>
+<td><a href="/details/{{d.id}}">{{d.name}}</a></td><br>
+<td>{{d.city}}</td><br>
+<td><a href='/delete/{{d.id}}/'> Delete</a> <br /> 
+</tr>
+
+
+{%endfor%}
+
+</body>
+</html>

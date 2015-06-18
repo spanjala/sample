@@ -1,0 +1,45 @@
+<html>
+<body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../favicon.ico">
+
+		<title>Stanford University</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="{{ STATIC_URL }}css/custom.css" rel="stylesheet">
+
+	</head>
+
+
+ <form id="login-form"  method="POST" >{% csrf_token %}
+ <div class="container">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="text-label" class="sr-only">Username</label>
+        <input  class="form-control" input id="username" name="username" type="text"  placeholder="Username"  >
+        <label for="text-label" class="sr-only">Password</label>
+		<input id="password" name="password" type="password"   class="form-control"  placeholder="Password" /></br></br>
+	
+         <button class="btn btn-lg btn-primary btn-block" type="submit" id="login" value="LOGIN"/>Sign in</button>
+		
+                      
+
+                                
+
+                          {% if e%}
+                          	  <font color="red">Please Enter Valid Credentials...</font></br>
+ 
+ 	                       {%endif%}
+						   </div>
+
+                            
+                    </form>

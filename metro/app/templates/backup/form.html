@@ -1,0 +1,24 @@
+<form action='' method='POST'>
+{% if form.errors%}
+				<font color="red">* All fields are mandatory</font></br>
+			
+					{%endif%}
+				
+{% csrf_token %}
+{%for i in form %}
+			<div class="form-row">
+                            <span class="text-label"><b>{{i.label_tag}}:</b>	<font color="red">*</font></span>{{i}}
+							{% if i.label == "name"%}
+								<font color="red">{{i.errors}}</font>
+							{%endif%}
+								
+							<font color="red">{{i.errors}}</font>
+							
+                                                        {% if i.label  ==  "City"%}
+								<font color="red">{{i.errors}}</font>
+							 {%endif%}
+							 
+							 {%endfor%}
+							 <a href="/show/"> show</a>
+<input type='submit' value='Submit' />
+</form>

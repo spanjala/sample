@@ -1,0 +1,25 @@
+<html>
+<body>
+<table>
+<table border="1" style="width:100%">
+ 
+<tr>
+<th>Name</th>
+<th>City</th>
+</tr>
+
+{% for d in list %}	
+<tr>
+<td><a href="/details/{{d.id}}">{{d.name}}</a></td><br>
+<td>{{d.city}}</td><br>
+<td><a href='/delete/{{d.id}}/'> Delete</a> <br /> 
+<td><a href='/form_edit/{{d.id}}/'> Edit</a> <br /> 
+</tr>
+
+
+{%endfor%}
+</table>
+<h1><a href="/logout/">Logout</a></h1>
+<a href="/form/">back</a>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+<body>
+<html>
+<body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../favicon.ico">
+
+		<title>Stanford University</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="{{ STATIC_URL }}css/custom.css" rel="stylesheet">
+<style>
+form{
+width:400px;
+margin: 0 auto;
+}
+.form-control{
+width:100% !important;
+}
+</style>
+	</head>
+
+
+<form method="POST">
+  {% if form.errors%}
+		<font color="red">* All fields are mandatory</font></br>
+	{%endif%}
+  {% csrf_token %}
+  <div class="form-group">
+    <label for=""text-label">Name</label>
+     <input  class="form-control" input id="name" name="name" type="text"  placeholder="name"  >
+  </div>
+  <div class="form-group">
+    <label for="text-label" >City</label>
+    <input  class="form-control" input id="city" name="city" type="text"  placeholder="city" 
+  </div>
+  
+  </div>
+  
+  <button type="submit" class="btn btn-default">Submit</button>
+   <a href="/show/"> show</a>
+</form>
+{%comment%}
+	<form action='' method='POST' class="form-horizontal">
+	
+	<div class="containerform">
+        <label for="text-label" class="sr-only">Name</label>
+        <input  class="form-control" input id="name" name="name" type="text"  placeholder="name"  >
+	</div>
+	<div class="">
+							
+							<label for="text-label" class="sr-only">City</label>
+        <input  class="form-control" input id="city" name="city" type="text"  placeholder="city"  ><br><br>
+								
+							
+							 
+							 
+							 <a href="/show/"> show</a>
+<input type='submit' value='Submit' />
+</form>
+{%endcomment%}
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<body>
+<html>
+<body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../favicon.ico">
+
+		<title>Stanford University</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="{{ STATIC_URL }}css/custom.css" rel="stylesheet">
+
+	</head>
+
+<form action='' method='POST'>
+{% if form.errors%}
+				<font color="red">* All fields are mandatory</font></br>
+			
+					{%endif%}
+				
+{% csrf_token %}
+
+			 <div class="containerform">
+                            <label for="text-label" class="sr-only">Name</label>
+							
+        <input  class="form-control" input id="name" name="name" type="text"  placeholder="name"  ><br>
+	
+		
+							
+							<label for="text-label" class="sr-only">City</label>
+        <input  class="form-control" input id="city" name="city" type="text"  placeholder="city"  ><br><br>
+	
+								
+							
+							 
+							 
+							 <a href="/show/"> show</a>
+<input type='submit' value='Submit' />
+</form>
+</div>
+</body>
+</html>

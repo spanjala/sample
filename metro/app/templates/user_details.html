@@ -1,0 +1,25 @@
+<html>
+<body>
+<table>
+<table border="1" style="width:100%">
+ 
+<tr>
+<th>UserName</th>
+<th>Email</th>
+<th>JoinDate</th>
+</tr>
+{% for d in list %}	
+<tr>
+
+
+<td>{{d.username}}</td>
+<td>{{d.email}}</td>
+<td>{{d.date_joined	}}</td>
+</tr>
+
+
+{%endfor%}
+ </table>
+ 
+</body>
+</html>
